@@ -1,1 +1,54 @@
-
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distinktioner</title>
+  </head>
+  <body>
+    <script>
+      const DISTINKTIONER = [
+        { name: "Søværnets chefsergent", file: "images/billede-01.png", group: "Befalingsmænd", page: 1, accept: [0] },
+        { name: "Chefsergent", file: "images/billede-02.png", group: "Befalingsmænd", page: 1, accept: [1] },
+        { name: "Søværnets Myndighedschef", file: "images/billede-03.png", group: "Befalingsmænd", page: 1, accept: [2] },
+        { name: "Seniorsergent", file: "images/billede-04.png", group: "Befalingsmænd", page: 1, accept: [3, 9] },
+        { name: "Oversergent", file: "images/billede-05.png", group: "Befalingsmænd", page: 2, accept: [4] },
+        { name: "Sergent", file: "images/billede-06.png", group: "Befalingsmænd", page: 2, accept: [5] },
+        { name: "Korporal", file: "images/billede-07.png", group: "Konstabler og elever", page: 2, accept: [6] },
+        { name: "Marine-specialist", file: "images/billede-08.png", group: "Konstabler og elever", page: 2, accept: [7] },
+        { name: "Marine-overkonstabel", file: "images/billede-09.png", group: "Konstabler og elever", page: 3, accept: [8] },
+        { name: "Marine-konstabel", file: "images/billede-10.png", group: "Konstabler og elever", page: 3, accept: [9, 3] },
+        { name: "Marineelev efter udstikning", file: "images/billede-11.png", group: "Konstabler og elever", page: 3, accept: [10] },
+        { name: "Marineelev før udstikning", file: "images/billede-12.png", group: "Konstabler og elever", page: 3, accept: [11] },
+        { name: "Kadet inden afmærkning som sergent sø (nyansat personel)", file: "images/billede-13.png", group: "Kadetter", page: 4, accept: [12] },
+        { name: "Kadet inden afmærkning som sergent sø (personel fra konstabelgruppen)", file: "images/billede-14.png", group: "Kadetter", page: 4, accept: [13] },
+        { name: "Kadet med afmærkning som sergent SØ", file: "images/billede-15.png", group: "Kadetter", page: 4, accept: [14] },
+        { name: "Seniormekaniker", file: "images/billede-16.png", group: "Specialfunktioner", page: 4, accept: [15] },
+        { name: "Overmekaniker af 1. grad", file: "images/billede-17.png", group: "Specialfunktioner", page: 5, accept: [16] },
+        { name: "Overmekaniker af 2. grad", file: "images/billede-18.png", group: "Specialfunktioner", page: 5, accept: [17] },
+        { name: "Mekaniker", file: "images/billede-19.png", group: "Specialfunktioner", page: 5, accept: [18] },
+        { name: "Orlogsprovst", file: "images/billede-20.png", group: "Specialfunktioner", page: 5, accept: [19] },
+        { name: "Orlogspræst", file: "images/billede-21.png", group: "Specialfunktioner", page: 6, accept: [20] },
+        { name: "Musikdirigent", file: "images/billede-22.png", group: "Specialfunktioner", page: 6, accept: [21] },
+        { name: "Militærjuridisk rådgiver", file: "images/billede-23.png", group: "Specialfunktioner", page: 6, accept: [22] },
+        { name: "Afdelingssygeplejerske", file: "images/billede-24.png", group: "Specialfunktioner", page: 6, accept: [23] },
+        { name: "Sygeplejerske (1. assistent)", file: "images/billede-25.png", group: "Specialfunktioner", page: 7, accept: [24] },
+        { name: "Sygeplejeassistent", file: "images/billede-26.png", group: "Specialfunktioner", page: 7, accept: [25] },
+        { name: "Læger og tandlæger med føringsuddannelse", file: "images/billede-27.png", group: "Specialfunktioner", page: 7, accept: [26] },
+        { name: "Læge med speciallægeanerkendelse", file: "images/billede-28.png", group: "Specialfunktioner", page: 7, accept: [27] },
+        { name: "Læge med ret til selvstændigt virke", file: "images/billede-29.png", group: "Specialfunktioner", page: 8, accept: [28] },
+        { name: "Læge med embedseksamen", file: "images/billede-30.png", group: "Specialfunktioner", page: 8, accept: [29] },
+        { name: "Admiral", file: "images/billede-31.png", group: "Officerer", page: 8, accept: [30] },
+        { name: "Viceadmiral", file: "images/billede-32.png", group: "Officerer", page: 8, accept: [31] },
+        { name: "Kontreadmiral", file: "images/billede-33.png", group: "Officerer", page: 9, accept: [32] },
+        { name: "Flotilleadmiral", file: "images/billede-34.png", group: "Officerer", page: 9, accept: [33] },
+        { name: "Kommandør", file: "images/billede-35.png", group: "Officerer", page: 9, accept: [34] },
+        { name: "Kommandørkaptajn", file: "images/billede-36.png", group: "Officerer", page: 9, accept: [35] },
+        { name: "Orlogskaptajn", file: "images/billede-37.png", group: "Officerer", page: 10, accept: [36] },
+        { name: "Kaptajnløjtnant", file: "images/billede-38.png", group: "Officerer", page: 10, accept: [37] },
+        { name: "Premierløjtnant", file: "images/billede-39.png", group: "Officerer", page: 11, accept: [38] },
+        { name: "Løjtnant", file: "images/billede-40.png", group: "Officerer", page: 11, accept: [39] }
+      ];
+    </script>
+  </body>
+</html>
